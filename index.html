@@ -9,7 +9,7 @@
             cursor: url('cursor.png'), auto;
         }
         button {
-            cursor: url('cursor-pointer.png'), pointer;
+            cursor: url('pointer.png'), pointer;
         }
         body {
             display: flex;
@@ -57,6 +57,10 @@
             overflow: hidden;
             border-right: 2px solid black; /* Simulates a cursor */
             animation: blink-cursor 0.8s step-end infinite;
+        }
+
+        .typewriter.hover {
+          cursor: url('pointer.png'), pointer;
         }
 
         #slide {
