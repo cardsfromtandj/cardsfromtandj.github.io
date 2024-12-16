@@ -83,14 +83,6 @@
             animation: blink-cursor 0.8s step-end infinite;
         }
 
-        .below-image {
-          display: flex;
-          justify-content: center; /* Centers horizontally */
-          align-items: center; /* Centers vertically */
-          height: auto; /* Makes the container only as tall as needed */
-          position: relative; /* Keeps it in place without affecting other elements */
-        }
-
         @keyframes blink-cursor {
             50% {
                 border-color: transparent;
@@ -148,14 +140,13 @@
     </div>
     <h1 onclick="renderGif()" class="typewriter">Merry Christmas from T and J ᒄ₍⁽ˆ⁰ˆ⁾₎ᒃ♪♬</h1>
     <div id="slideshow">
+        <button class="arrow-left" onclick="prevSlide()">&#8592;</button>
         <img id="slide" src="1.jpg" alt="Slideshow Image" onclick="nextSlide()">
     </div>
-    <div margin="3px" class="below-image">
-        <audio id="myAudio" controls autoplay loop>
-            <source src="music.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+    <audio id="myAudio" controls autoplay loop>
+      <source src="music.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <script>
         const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
         let currentIndex = 0;
