@@ -131,7 +131,7 @@
     <div id="slideshow">
         <button class="arrow-left" onclick="prevSlide()">prev</button>
         <button class="arrow-right" onclick="nextSlide()">next</button>
-        <img id="slide" src="1.jpg" alt="Slideshow Image" onclick="nextSlide()">
+        <img id="slide" src="1.jpg" alt="Slideshow Image" onclick="showMessage()">
     </div>
     <audio id="myAudio" controls autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
@@ -157,6 +157,10 @@
 
         function renderGif() {
             document.getElementById('slide').src = "floss.gif";
+        }
+
+        function showMessage() {
+          document.getElementById('slide').src = "card-message.png";
         }
 
         function playMusic() {
