@@ -23,6 +23,7 @@
             text-align: center; /* Center text */
             padding: 3px;
       }
+
       /* Mobile-specific background */
       @media screen and (max-width: 768px) {
           body {
@@ -34,6 +35,7 @@
             border-right: 2px solid white; /* Simulates a cursor */
           }
       }
+
        #slideshow {
             position: relative;
             width: 70%; /* Adjust width as needed */
@@ -46,41 +48,16 @@
             border-radius: 8px; /* Optional: Round corners */
         }
 
-        .arrow {
-            cursor: url('cursor.png'), auto;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
-            border: none;
-            border-radius: 50%; /* Round buttons */
-            z-index: 1; /* Ensure arrows are on top */
-        }
-
-        .arrow-left {
-            left: 5%; /* Position left arrow */
-        }
-
-        .arrow-image {
-          width: 2vw; /* Scale the arrow icon based on viewport width */
-          height: 2vw; /* Keep the arrow icon square */
-        }
-
-        .easter-egg {
-          width: 2.5vw; /* Scale the arrow icon based on viewport width */
-          height: 2.5vw; /* Keep the arrow icon square */
-        }
-
-        .arrow-right {
-            right: 5%; /* Position right arrow */
-        }
-
         .typewriter {
             font-family: monospace;
             white-space: normal;
             overflow: hidden;
             border-right: 2px solid black; /* Simulates a cursor */
             animation: blink-cursor 0.8s step-end infinite;
+        }
+
+        .slide {
+          margin-top: 4px;
         }
 
         @keyframes blink-cursor {
@@ -141,8 +118,8 @@
     <h1 onclick="renderGif()" class="typewriter">Merry Christmas from T and J ᒄ₍⁽ˆ⁰ˆ⁾₎ᒃ♪♬</h1>
     <div id="slideshow">
         <button class="arrow-left" onclick="prevSlide()">&#8592;</button>
-        <button class="arrow-right" onclick="nextSlide()">&#8594;</button>
         <img id="slide" src="1.jpg" alt="Slideshow Image" onclick="nextSlide()">
+        <button class="arrow-right" onclick="nextSlide()">&#8594;</button>
     </div>
     <audio id="myAudio" controls autoplay loop>
       <source src="music.mp3" type="audio/mpeg">
