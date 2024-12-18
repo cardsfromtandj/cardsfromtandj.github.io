@@ -139,13 +139,13 @@
       Your browser does not support the audio element.
     </audio>
     <script>
-        const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "card-message.png"];
-        const lastCardIndex = images.length - 1;
+        const images = ["card-message.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+        const lastCardIndex = 0;
 
         document.addEventListener("DOMContentLoaded", () => {
           const hash = window.location.hash;
           if (hash === "#hank") {
-            images[lastCardIndex] = "hank-card-message.jpg";
+            images[lastCardIndex] = "hank-card.png";
           }
         });
 
