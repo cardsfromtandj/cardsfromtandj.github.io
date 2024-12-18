@@ -156,7 +156,7 @@
     <script>
         const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
         const cardImage = ["letters/default.png"];
-        const cardState = [true];
+        const cardState = [false];
 
         document.addEventListener("DOMContentLoaded", () => {
           const hash = window.location.hash;
@@ -170,11 +170,13 @@
         function nextSlide() {
             currentIndex = (currentIndex + 1) % images.length; // Cycle to next image
             updateSlide();
+            cardState[0] = false;
         }
 
         function prevSlide() {
             currentIndex = (currentIndex - 1 + images.length) % images.length; // Cycle to previous image
             updateSlide();
+            cardState[0] = false;
         }
 
         function updateSlide() {
@@ -183,6 +185,7 @@
 
         function renderGif() {
             document.getElementById('slide').src = "floss.gif";
+            cardState[0] = false;
         }
 
         function toggleCard() {
