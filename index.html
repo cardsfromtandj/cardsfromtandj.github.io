@@ -140,6 +140,14 @@
     </audio>
     <script>
         const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "card-message.png"];
+        const lastCardIndex = images.length - 1;
+
+        document.addEventListener("DOMContentLoaded", () => {
+          if (window.location.pathname.includes("hank")) {
+            images[lastCardIndex] = "hank-card-message.jpg";
+          }
+        });
+
         let currentIndex = 0;
 
         function nextSlide() {
