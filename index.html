@@ -155,13 +155,13 @@
     </audio>
     <script>
         const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
-        const cardImage = ["letters/default.png"];
+        const cardImage = ["letters/generic.jpg"];
         const cardState = [false];
 
         document.addEventListener("DOMContentLoaded", () => {
           const hash = window.location.hash;
           if (hash === "#hank") {
-            cardImage[0] = "letters/hank.png";
+            cardImage[0] = "letters/hank.jpg";
           } else if (hash == "#tristan") {
             cardImage[0] = "letters/tristan.jpg";
           }
