@@ -26,21 +26,34 @@
             font-family: Arial, sans-serif; /* Set a default font */
             text-align: center; /* Center text */
             padding: 3px;
-      }
+        }
 
-      /* Mobile-specific background */
-      @media screen and (max-width: 768px) {
-          body {
-              background-image: none; /* Mobile-specific background */
-              background-size: cover; /* Ensures the background covers the entire screen */
-              color: white; /* Set the text color to white for contrast */
-          }
-          .typewriter {
-            border-right: 2px solid white; /* Simulates a cursor */
-          }
-      }
+        /* Mobile-specific background */
+        @media screen and (max-width: 768px) {
+            body {
+                background-image: none; /* Mobile-specific background */
+                background-size: cover; /* Ensures the background covers the entire screen */
+                color: white; /* Set the text color to white for contrast */
+            }
+            .typewriter {
+              border-right: 2px solid white; /* Simulates a cursor */
+            }
+        }
 
-       #slideshow {
+        .open-card-button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: url('pointer.png'), pointer;
+        }
+
+        .open-card-button:hover {
+            background-color: red;
+        }
+
+        #slideshow {
             position: relative;
             width: 70%; /* Adjust width as needed */
             max-width: 500px; /* Limit maximum width */
