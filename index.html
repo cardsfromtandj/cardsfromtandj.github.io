@@ -130,8 +130,9 @@
     </div>
     <h1 onclick="renderGif()" class="typewriter">Merry Christmas from T and J ᒄ₍⁽ˆ⁰ˆ⁾₎ᒃ♪♬</h1>
     <div id="slideshow">
-        <button class="arrow-left" onclick="prevSlide()">prev</button>
-        <button class="arrow-right" onclick="nextSlide()">next</button>
+        <button onclick="prevSlide()">prev</button>
+        <button onclick="nextSlide()">next</button>
+        <button onclick="renderCard()">open letter</button>
         <img id="slide" src="1.jpg" alt="Slideshow Image" onclick="nextSlide()">
     </div>
     <audio id="myAudio" controls autoplay loop>
@@ -139,13 +140,13 @@
       Your browser does not support the audio element.
     </audio>
     <script>
-        const images = ["card-message.png", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
-        const lastCardIndex = 0;
+        const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
+        const cardImage = ["card-message.png"];
 
         document.addEventListener("DOMContentLoaded", () => {
           const hash = window.location.hash;
           if (hash === "#hank") {
-            images[lastCardIndex] = "hank-card.png";
+            cardImage[0] = "hank-card.png"
           }
         });
 
@@ -169,8 +170,8 @@
             document.getElementById('slide').src = "floss.gif";
         }
 
-        function showMessage() {
-          document.getElementById('slide').src = "card-message.png";
+        function renderCard() {
+          document.getElementById('slide').src = cardImage[0];
         }
 
         function playMusic() {
