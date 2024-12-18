@@ -40,13 +40,17 @@
             }
         }
 
-        .open-card-button {
-            background-color: green;
-            color: white;
-            cursor: url('pointer.png'), pointer;
+        .slide-button {
+          background-color: grey;
+          color: white;
         }
 
-        .open-card-button:hover {
+        .toggle-card-button {
+            background-color: green;
+            color: white;
+        }
+
+        .toggle-card-button:hover {
             background-color: red;
         }
 
@@ -140,9 +144,9 @@
     </div>
     <h1 onclick="renderGif()" class="typewriter">Merry Christmas from T and J ᒄ₍⁽ˆ⁰ˆ⁾₎ᒃ♪♬</h1>
     <div id="slideshow">
-        <button onclick="prevSlide()">prev</button>
-        <button onclick="nextSlide()">next</button>
-        <button class="open-card-button" onclick="renderCard()">open letter</button>
+        <button class="slide-button" onclick="prevSlide()">prev img</button>
+        <button class="slide-button" onclick="nextSlide()">next img</button>
+        <button class="toggle-card-button" onclick="toggleCard()">toggle letter</button>
         <img id="slide" src="1.jpg" alt="Slideshow Image" onclick="nextSlide()">
     </div>
     <audio id="myAudio" controls autoplay loop>
@@ -152,6 +156,7 @@
     <script>
         const images = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
         const cardImage = ["letters/default.png"];
+        const cardState = [true];
 
         document.addEventListener("DOMContentLoaded", () => {
           const hash = window.location.hash;
@@ -180,8 +185,13 @@
             document.getElementById('slide').src = "floss.gif";
         }
 
-        function renderCard() {
-          document.getElementById('slide').src = cardImage[0];
+        function toggleCard() {
+          if (cardState[0]) {
+            updateSlide();
+          } else {
+            document.getElementById('slide').src = cardImage[0];
+          }
+          cardState[0] = !cardState[0]
         }
 
         function playMusic() {
