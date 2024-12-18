@@ -161,7 +161,9 @@
         document.addEventListener("DOMContentLoaded", () => {
           const hash = window.location.hash;
           if (hash === "#hank") {
-            cardImage[0] = "letters/hank.png"
+            cardImage[0] = "letters/hank.png";
+          } else if (hash == "#tristan") {
+            cardImage[0] = "letters/tristan.jpg";
           }
         });
 
