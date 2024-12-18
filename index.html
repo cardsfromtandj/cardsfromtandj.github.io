@@ -143,7 +143,8 @@
         const lastCardIndex = images.length - 1;
 
         document.addEventListener("DOMContentLoaded", () => {
-          if (window.location.pathname.includes("hank")) {
+          const hash = window.location.hash;
+          if (hash === "#hank") {
             images[lastCardIndex] = "hank-card-message.jpg";
           }
         });
